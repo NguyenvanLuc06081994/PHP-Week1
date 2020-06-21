@@ -10,8 +10,8 @@
 <body>
 <?php
 $dictionary = array("hello" => "xin chao", "how" => "the nao", "book" => "sach", "computer" => "may tinh");
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $searchWord = $_POST["search"];
+if ($_SERVER["REQUEST_METHOD"] === "GET") {
+    $searchWord = $_GET["search"];
     $flag = false;
     foreach ($dictionary as $key => $value) {
         if ($key === $searchWord) {
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 <h2>Dictionary</h2>
-<form action="" method="post">
+<form action="" method="GET">
     <input type="text" name="search" placeholder="Input Word">
     <input type="submit" id="submit" value="Search">
 </form>
