@@ -8,15 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    $price = $_POST['price'];
-    $name = $_POST['name'];
-    $discount = $_POST['discount'];
-    $result = $price * $discount * 0.1;
-    echo "Luong chiet khau cua san pham $name la : ".$result.".";
-}
-?>
 <form action="display.php" method="post">
     <input type="text" name="name" placeholder="Name of product">
     <input type="text" name="price" placeholder="List Price">
