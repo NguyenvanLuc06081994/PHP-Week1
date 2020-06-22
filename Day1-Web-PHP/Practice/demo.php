@@ -1,4 +1,5 @@
 
 <?php
-define("GREETING", "Welcome to W3Schools.com!");
-echo GREETING;
+
+
+echo $rest = substr("abcdef", -2, 1) . "<br />";

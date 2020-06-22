@@ -32,8 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     {
         $N = 2;
         $numbers = +$_POST["number"];
-        $count = 0;
-        while ($count < $numbers) {
+        for ( $count = 0;$count < $numbers;) {
             if (isPrime($N)) {
                 echo $N . "<br>";
                 $count++;
