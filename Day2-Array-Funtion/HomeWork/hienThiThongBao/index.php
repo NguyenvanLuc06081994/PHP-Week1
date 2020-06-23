@@ -17,21 +17,21 @@
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $index = $_POST['number'];
     $number = $_POST['number1'];
-    function arr($number, $index)
-    {
         $arr = [];
         for ($i = 0; $i < $number; $i++) {
             $arr[$i] = rand(0, 100);
         }
         if ($index < 0 || $index > $number) {
             echo "Vuot qua gioi han cua mang";
-        }else{
+        } else {
             echo $arr[$index];
         }
 
-    }
 
-    arr($number, $index);
+
+    echo "<pre>";
+    echo print_r($arr);
+    echo "</pre>";
 }
 ?>
 </body>
