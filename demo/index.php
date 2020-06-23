@@ -12,7 +12,7 @@
 <p>my text</p>
 <?php
 include 'important.php';
-//include 'important.php';
+include 'important.php';
 //include 'important.php';
 show_message();
 //require 'important.php';

@@ -7,4 +7,5 @@
 function sum($x,$y){
     return $x + $y;
 }
-echo sum(1,2);
+//echo sum(1,2);
+var_dump( function_exists ( "sub" ));
