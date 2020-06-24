@@ -8,6 +8,8 @@ $fan1-> setColor("yellow");
 $fan1 -> setRadius(10);
 $fan1->turnOn();
 $fan1 -> toString();
+$fan1 ->turnOff();
+$fan1 -> toString();
 echo "<br>";
 echo "Quat 2";
 echo "<br>";

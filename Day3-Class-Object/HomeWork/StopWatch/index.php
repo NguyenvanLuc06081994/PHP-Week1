@@ -1,2 +1,7 @@
 <?php
-echo date("Y-m-d h:i:sa");
+include "watch.php";
+$time = new StopWatch();
+ $time -> start();
+ echo $time -> getStartTime();
+ $time->stop();
+ echo $time -> getElapsed();

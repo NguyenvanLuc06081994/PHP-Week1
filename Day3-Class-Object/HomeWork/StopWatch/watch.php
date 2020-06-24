@@ -1,5 +1,7 @@
 <?php
-class StopWatch{
+
+class StopWatch
+{
     private $startTime;
 
     public function getStartTime()
@@ -24,12 +26,29 @@ class StopWatch{
     {
         $this->endTime = $endTime;
     }
+
     private $endTime;
+
     public function __construct()
     {
-        $this->startTime = date("Y-m-d h:i:sa");
-    }
-    public function startTime(){
+        $this->startTime = date(" h:i:s");
 
+    }
+
+    public function start()
+    {
+         $this->setStartTime(date("h:i:s"));
+    }
+
+    public function stop()
+    {
+        $this->setEndTime(date("h:i:s"));
+    }
+
+    public function getElapsed()
+    {
+        $result = $this->getEndTime()-> diff($this->getStartTime());
+        $result->format("%h:%i:%s");
+        return $result;
     }
 }

@@ -62,14 +62,21 @@ class Fan
         $this->setStatus(true);
     }
 
+    public function turnOff()
+    {
+        $this->setStatus(false);
+        $this->setSpeed(0);
+    }
+
     public function toString()
     {
         if ($this->isStatus() === false) {
-            echo "fan is off"."<br>";
-        } else if ($this->isStatus() === true) {
-            echo "Mau cua quat la ".$this->getColor() . "<br>";
-            echo "ban kinh cua quat ".$this->getRadius() . "<br>";
-            echo "toc do cua quat ".$this->getSpeed() . "<br>";
+            echo "fan is off ". "toc do cua quat la ".$this->getSpeed(0). "<br>" ;
+        } else {
+            echo "fan is on <br>";
+            echo "Mau cua quat la " . $this->getColor() . "<br>";
+            echo "ban kinh cua quat " . $this->getRadius() . "<br>";
+            echo "toc do cua quat " . $this->getSpeed() . "<br>";
         }
 
 
