@@ -15,24 +15,24 @@
     <input type="submit" value="Calculator">
 </form>
 <?php
-include ("calculator.php");
-if ($_SERVER['REQUEST_METHOD']=="POST"){
+include("calculator.php");
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $a = $_POST['a'];
     $b = $_POST['b'];
     $c = $_POST['c'];
-    $pt = new QuadraticEquation($a,$b,$c);
-    if ( $a!= 0){
-        if ($pt->getDiscriminant() < 0 ){
+    $pt = new QuadraticEquation();
+    if ($a != 0) {
+        if ($pt->getDiscriminant() < 0) {
             echo "pt vo nghiem";
-        }else{
-            $pt->setA($a);
-            $pt->setB($b);
-            $pt->setC($c);
-            echo "nghiem 1 cua phuong trinh ". $pt ->getRoot1();
+        } else {
+            $pt->setA();
+            $pt->setB();
+            $pt->setC();
+            echo "nghiem 1 cua phuong trinh " . $pt->getRoot1();
             echo "<br>";
-            echo "nghiem 2 cua phuong trinh ". $pt ->getRoot2();
+            echo "nghiem 2 cua phuong trinh " . $pt->getRoot2();
         }
-    }else{
+    } else {
         echo "ban giai pt bac nhat";
     }
 
