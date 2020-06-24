@@ -5,5 +5,6 @@ $app1 = new Application("flappy bird");
 echo "Tong so doi tuong dem duoc la : ".Application::$count."<br>";
 $app2 = new Application("brain out");
 echo "Tong so doi tuong dem duoc la : ".Application::$count."<br>";
-echo $app1->getName() ."<br>";
+$app1->getName();
+echo $app1 -> __tooString()."<br>";
 echo $app2->getName() ."<br>";
