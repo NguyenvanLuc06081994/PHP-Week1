@@ -25,9 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         if ($pt->getDiscriminant() < 0) {
             echo "pt vo nghiem";
         } else {
-            $pt->setA();
-            $pt->setB();
-            $pt->setC();
+            $pt->setA($a);
+            $pt->setB($b);
+            $pt->setC($c);
             echo "nghiem 1 cua phuong trinh " . $pt->getRoot1();
             echo "<br>";
             echo "nghiem 2 cua phuong trinh " . $pt->getRoot2();
