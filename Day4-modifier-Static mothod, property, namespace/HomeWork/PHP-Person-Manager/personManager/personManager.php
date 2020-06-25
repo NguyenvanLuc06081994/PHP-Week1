@@ -31,7 +31,6 @@
             echo "<th>vi tri</th>";
             echo "</tr>";
             foreach ($this->employees as $key => $employee){
-
                 echo "<tr>";
                 echo "<td>".$employee->getSurname()."</td>";
                 echo "<td>".$employee->getName()."</td>";
