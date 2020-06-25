@@ -1,7 +1,7 @@
 <?php
 include("Models/product.php");
 include("Services/productManager.php");
-$product = new \Models\Product();
+$product = new Product();
 $product->setName("iphone");
 $product->setPrice(10000);
 $productManager = new \Services\ProductManager();
