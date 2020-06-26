@@ -1,6 +1,7 @@
 <?php
 
-class Point2D
+
+class Point
 {
     protected $x;
     protected $y;
@@ -29,14 +30,12 @@ class Point2D
     {
         $this->x = $x;
         $this->y = $y;
-
     }
 
-    public function SetXY($x, $y)
+    public function setXY($x, $y)
     {
         $this->x = $x;
         $this->y = $y;
-
     }
 
     public function getXY()
@@ -45,40 +44,12 @@ class Point2D
         array_push($arr, $this->x, $this->y);
         return $arr;
     }
-}
 
-class Point3D extends Point2D
-{
-    protected $z;
-
-    public function __construct($x, $y, $z)
+    public function toString()
     {
-        parent::__construct($x, $y);
-        $this->z = $z;
+        echo "<pre>";
+        print_r($this->getXY());
+        echo "</pre>";
     }
 
-    public function getZ()
-    {
-        return $this->z;
-    }
-
-    public function setZ($z): void
-    {
-        $this->z = $z;
-    }
-
-    public function setXYZ($x, $y, $z)
-    {
-        parent::setXY($x, $y);
-        $this->z = $z;
-
-    }
-
-    public function getXYZ()
-    {
-        $arr = parent::getXY();
-        array_push($arr, $this->z);
-        return $arr;
-
-    }
 }
